@@ -6,6 +6,11 @@ module.exports = {
   },
   preset: 'ts-jest',
   verbose: true,
+  forceExit: true,
+  clearMocks: true,
+  resetMocks: true,
+  restoreMocks: true,
+  clearMocks:true,
   setupFilesAfterEnv: ['<rootDir>/src/__tests__/setup.ts'],
   detectOpenHandles: true,
   moduleNameMapper: {
