@@ -16,6 +16,9 @@ const config = cleanEnv(process.env, {
   MONGO_URI: url({
     desc: 'MongoDB connection string',
   }),
+  MONGO_TEST_URI: url({
+    desc: 'MongoDB test connection string',
+  }),
   JWT_SECRET: str({
     desc: 'Secret key for signing JSON Web Tokens (JWT)',
   }),

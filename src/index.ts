@@ -10,7 +10,7 @@ import config from './config';
 import Logger from './utils/logger';
 
 const PORT = config.PORT;
-const app = express();
+export const app = express();
 
 app.use(httpLogger);
 app.use(helmet());
@@ -20,9 +20,9 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
+app.get('/health', (req, res) => {
   res.status(200).json({
-    message: 'Hello world',
+    message: 'OK',
   });
 });
 
